@@ -1,0 +1,244 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #3B82F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px 0; /* Added padding to ensure spacing */
+}
+
+/* App Container */
+.app-container {
+    width: 450px;
+    height: 100vh; 
+    background: #fff;
+    /* border-radius: 12px; */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0; /* Ensures padding at the top and bottom */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    background: white;
+}
+
+.menu-icon, .search-icon {
+    cursor: pointer;
+}
+
+/* Route Card */
+.route-card {
+    position: relative;
+    background: url(img/map.png) no-repeat center/cover;
+    color: white;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.map-overlay {
+    background: #3B82F6;
+    opacity: 0.8;
+    padding: 25px;
+    border-radius: 2px;
+    font-size: 14px;
+    box-shadow: 0px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+.details {
+    font-size: 15px;
+    margin-top: 5px;
+    display: flex;
+    justify-content:flex-start;  
+}
+
+.details small {
+    color: #fff;
+    font-size: 13px;  
+}
+.details #timeh{
+    margin-right: 100px;
+}
+
+p #car{
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    padding-bottom: 15px;
+    margin-top: -25px;
+    margin-bottom: 10px;
+}
+
+/* Floating Button */
+.map-btn {
+    position: absolute;
+    bottom: -20px;
+    right: -8%;
+    transform: translateX(-50%);
+    background: #3B82F6;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 13px;
+}
+.map-overlay #ovl{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    
+}
+.map-overlay #ovl strong{
+    font-size: 18px;
+    
+}
+
+/* Route Details */
+.route-details {
+    padding: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-size: 18px;
+    margin-right: 10px;
+    
+}
+
+/* Image Step */
+.image-step{
+   background-image: url(img/streetview.jpg);
+     height: 80px; 
+    position: relative;
+}
+
+.image-step .icon{
+    position: absolute;
+    top: 40%;
+    left:2%;
+    
+}
+small{
+    color: rgb(136, 135, 135);
+}
+
+
+/* Responsive Design */
+/* @media (max-width: 400px) {
+    .app-container {
+        width: 90%;
+    }
+} */
+
+
+/* Responsive Design */
+
+/* Small Devices (Portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .app-container {
+      width: 95%;
+      height: auto;
+    }
+  
+    .header h3 {
+      font-size: 16px;
+    }
+  
+    .map-overlay {
+      padding: 20px;
+    }
+  
+    .map-btn {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  
+    .map-overlay #ovl strong {
+      font-size: 16px;
+    }
+  
+    .details #timeh {
+      margin-right: 50px;
+    }
+  }
+  
+  /* Medium Devices (Landscape phones to small tablets, 576px - 767.98px) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .app-container {
+      width: 90%;
+      height: auto;
+    }
+  
+    .map-btn {
+      right: 5%;
+    }
+  }
+  
+  /* Large Devices (Tablets, 768px - 991.98px) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .app-container {
+      width: 70%;
+      height: auto;
+    }
+  
+    .map-btn {
+      right: 5%;
+    }
+  
+    .map-overlay #ovl strong {
+      font-size: 20px;
+    }
+  
+    .step p {
+      font-size: 14px;
+    }
+  }
+  
+  /* Extra Large Devices (Desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .app-container {
+      width: 500px;
+      height: 90vh;
+    }
+  
+    .header h3 {
+      font-size: 20px;
+    }
+  
+    .map-overlay {
+      padding: 25px 30px;
+    }
+  
+    .step p {
+      font-size: 15px;
+    }
+  
+    .map-btn {
+      font-size: 14px;
+      right: 3%;
+    }
+  }
+  
